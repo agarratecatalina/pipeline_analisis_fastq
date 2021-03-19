@@ -24,7 +24,7 @@ for s in "${samples[@]}"
 	#zcat /home/cata/EBV/ANALISIS-OTRAS-SEQ/FASTQ/$s/*_1.fastq.gz |gzip > $outtrimmed/$s/$s.R1.fq.gz
 	#zcat /home/cata/EBV/ANALISIS-OTRAS-SEQ/FASTQ/$s/*_2.fastq.gz |gzip > $outtrimmed/$s/$s.R2.fq.gz
 	
-	fastp --disable_adapter_trimming -i /mnt/datos/EBV/ncbi/fastq/$s/$s'_1.fastq.gz' -I /mnt/datos/EBV/ncbi/fastq/$s/$s'_2.fastq.gz' -o $outtrimmed/$s/$s.R1.trimmed.fq -O $outtrimmed/$s/$s.R2.trimmed.fq --trim_front1=15 --trim_tail1=5 -e 28 --length_required 50;
+	fastp --disable_adapter_trimming -i /mnt/datos/EBV/ncbi/fastq/$s/$s'_1.fastq.gz' -I /mnt/datos/EBV/ncbi/fastq/$s/$s'_2.fastq.gz' -o $outtrimmed/$s/$s.R1.trimmed.fq -O $outtrimmed/$s/$s.R2.trimmed.fq --trim_front1=15 --trim_tail1=5 -e 28 --length_required 25;
 
 	##Remove duplicates
 
